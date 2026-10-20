@@ -2,13 +2,13 @@
 name: Scheduled Workflow
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '*/5 * * * *'
 
 jobs:
   scheduled:
     runs-on: ubuntu-latest
-
     steps:
       - name: Show scheduled execution
         run: echo "Scheduled workflow executed successfully"
